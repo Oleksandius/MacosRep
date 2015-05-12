@@ -38,16 +38,29 @@
 
 				<ul class="nav navbar-nav navbar-right">
 					@if (Auth::guest())
-						<li><a href="{{ url('/auth/login') }}">Login</a></li>
-						<li><a href="{{ url('/auth/register') }}">Register</a></li>
+						<li><a href="{{ url('/auth/login') }}"><?php echo Lang::get('messages.log');?></a></li>
+						<li><a href="{{ url('/auth/register') }}"><?php echo Lang::get('messages.reg');?></a></li>
+
 					@else
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
 							<ul class="dropdown-menu" role="menu">
-								<li><a href="{{ url('/auth/logout') }}">Logout</a></li>
+								<li><a href="{{ url('/auth/logout') }}"><?php echo Lang::get('messages.relog');?></a></li>
 							</ul>
 						</li>
 					@endif
+<li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ Config::get('languages')[App::getLocale()] }} <b class="caret"></b></a>
+    <ul class="dropdown-menu">
+        @foreach (Config::get('languages') as $lang => $language)
+            @if ($lang != App::getLocale())
+                <li>
+                    {!! link_to_route('lang.switch', $language, $lang) !!}
+                </li>
+            @endif
+        @endforeach
+    </ul>
+</li>
 				</ul>
 			</div>
 		</div>

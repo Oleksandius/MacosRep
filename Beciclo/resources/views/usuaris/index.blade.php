@@ -1,7 +1,7 @@
 @extends('app')
  
 @section('content')
-    <h2>Usuaris</h2>
+    <?php echo "<h2>".Lang::get('messages.userIndex')."</h2>"?>
  
     @if ( !$usuaris->count() )
         No hay usuarios 

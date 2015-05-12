@@ -6,7 +6,7 @@
     <h2>Titol : <strong>{{  $producte->titol }}</strong></h2>
     <h2>Marca  : <strong>{{  $producte->marca }}</strong></h2>
     <h2>Model  : <strong>{{  $producte->model }}</strong></h2>
-    <h2>Preu  : <strong>{{  $producte->preu }} €</strong></h2>
+    <h2>Preu  : <strong>{{  $producte->preu }} â‚¬</strong></h2>
     <h2>Any : <strong>{{  $producte->any }}</strong></h2>
     <h2>Pes : <strong>{{  $producte->pes_aprox }} Kg</strong></h2>
     <h2>Material : <strong>{{  $producte->material }}</strong></h2>
