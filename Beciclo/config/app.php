@@ -144,9 +144,6 @@ return [
 		'App\Providers\ConfigServiceProvider',
 		'App\Providers\EventServiceProvider',
 		'App\Providers\RouteServiceProvider',
-		/*
-		 * Instalamos Illuminate
-		 */
 		'Illuminate\Html\HtmlServiceProvider',
 
 	],
@@ -196,12 +193,8 @@ return [
 		'URL'       => 'Illuminate\Support\Facades\URL',
 		'Validator' => 'Illuminate\Support\Facades\Validator',
 		'View'      => 'Illuminate\Support\Facades\View',
-	   /*
-		* Instalamos form + html 
-		*/
 		'Form'=> 'Illuminate\Html\FormFacade', 
 	    'HTML'=> 'Illuminate\Html\HtmlFacade',
-
 
 	],
 

@@ -1,6 +1,5 @@
 <?php namespace App\Http\Controllers;
-use App\Producte;
-use App\Preferit;
+
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -15,25 +14,25 @@ class PreferitsController extends Controller {
 	 */
 	public function index()
 	{
-		return view('preferits.index', compact('preferit'));
+		//
 	}
 
 	/**
 	 * Show the form for creating a new resource.
-	 * @param  Producte $producte
+	 *
 	 * @return Response
 	 */
-	public function create(Producte $producte)
+	public function create()
 	{
-		return view('preferits.create', compact('preferit'));
+		//
 	}
 
 	/**
 	 * Store a newly created resource in storage.
-	 *@param  Producte $producte
+	 *
 	 * @return Response
 	 */
-	public function store(Producte $producte)
+	public function store()
 	{
 		//
 	}
@@ -41,32 +40,32 @@ class PreferitsController extends Controller {
 	/**
 	 * Display the specified resource.
 	 *
-	 * @param  Producte $producte, Preferit $preferit
+	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show(Producte $producte, Preferit $preferit)
+	public function show($id)
 	{
-		return view('preferits.show', compact('producte', 'preferit'));
+		//
 	}
 
 	/**
 	 * Show the form for editing the specified resource.
 	 *
-	 * @param  Producte $producte, Preferit $preferit
+	 * @param  int  $id
 	 * @return Response
 	 */
-	public function edit(Producte $producte, Preferit $preferit)
+	public function edit($id)
 	{
-		return view('preferits.edit', compact('producte', 'preferit'));
+		//
 	}
 
 	/**
 	 * Update the specified resource in storage.
 	 *
-	 * @param  Producte $producte, Preferit $preferit
+	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update(Producte $producte, Preferit $preferit)
+	public function update($id)
 	{
 		//
 	}
@@ -74,10 +73,10 @@ class PreferitsController extends Controller {
 	/**
 	 * Remove the specified resource from storage.
 	 *
-	 * @param  Producte $producte, Preferit $preferit
+	 * @param  int  $id
 	 * @return Response
 	 */
-	public function destroy(Producte $producte, Preferit $preferit)
+	public function destroy($id)
 	{
 		//
 	}

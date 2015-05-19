@@ -1,5 +1,7 @@
 <?php namespace App\Http\Controllers;
-
+use Auth;
+use App\Producte;
+use App\Preferit;
 class HomeController extends Controller {
 
 	/*
@@ -30,7 +32,14 @@ class HomeController extends Controller {
 	 */
 	public function index()
 	{
-		return view('home');
+		$productes = Producte::all();
+		$user = Auth::user();
+		return view('home',compact('productes'));
 	}
+        
+        public function perfil()
+        {
+            return view('perfil');
+        }
 
 }

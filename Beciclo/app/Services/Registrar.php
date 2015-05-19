@@ -29,11 +29,18 @@ class Registrar implements RegistrarContract {
 	 */
 	public function create(array $data)
 	{
+           
 		return User::create([
-			'name' => $data['name'],
-			'email' => $data['email'],
-			'password' => bcrypt($data['password']),
-		]);
+                    'name' => $data['name'],
+                    'email' => $data['email'],
+                    'password' => bcrypt($data['password']),
+                    'cognom' => $data['cognom'],
+                    'provincia' => $data['provincia'],
+                    'ciutat' => $data['ciutat'],
+                    'direccio' => $data['direccio'],
+                    'telefon' => $data['telefon'],
+                    'foto' =>  file_get_contents($data['foto']),
+        ]);
 	}
 
 }

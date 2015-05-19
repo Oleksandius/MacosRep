@@ -2,9 +2,8 @@
 
 return [
 
-    "log" => "Entra",
-    "reg" => "Registrate",
-    "relog" => "Salir",
-    "prod" => "Productes",
-    "userIndex" => "Usuarios",
+	"log"                  => "Entra",
+	"reg"                  => "Registrate",
+	"relog"                => "Salir",
+	"prod"                => "Productes",	
 ];

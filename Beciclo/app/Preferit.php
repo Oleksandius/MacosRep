@@ -8,5 +8,9 @@ class Preferit extends Model {
 	{
 		return $this->belongsTo('App\Producte');
 	}
+	public function usuari()
+	{
+		return $this->belongsTo('App\Usuari');
+	}
 
 }

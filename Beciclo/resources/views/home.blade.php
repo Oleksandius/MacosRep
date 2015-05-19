@@ -1,17 +1,15 @@
 @extends('app')
-
+ 
 @section('content')
-<div class="container">
-	<div class="row">
-		<div class="col-md-10 col-md-offset-1">
-			<div class="panel panel-default">
-				<div class="panel-heading">Home</div>
-
-				<div class="panel-body">
-					You are logged in!
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+    <h2>Productes</h2>
+ 
+    @if ( !$productes->count() )
+        No hi ha productes disponibles
+    @else
+        <ul>
+            @foreach( $productes as $producte )
+                <li><a href="{{ route('productes.show', [$producte->id]) }}">{{ $producte->titol }}</a></li>
+            @endforeach
+        </ul>
+    @endif
 @endsection

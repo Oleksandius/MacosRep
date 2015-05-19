@@ -1,4 +1,5 @@
 <?php namespace App\Http\Controllers;
+use App\Producte;
 
 class WelcomeController extends Controller {
 
@@ -30,7 +31,8 @@ class WelcomeController extends Controller {
 	 */
 	public function index()
 	{
-		return view('welcome');
+		$productes = Producte::all();
+		return view('welcome',compact('productes'));
 	}
 
 }
